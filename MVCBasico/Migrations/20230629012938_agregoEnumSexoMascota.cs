@@ -1,32 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MVCBasico.Migrations
 {
-    public partial class CrearTablas : Migration
+    public partial class agregoEnumSexoMascota : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Mascotas",
+                name: "Usuarios",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(nullable: true),
-                    Raza = table.Column<string>(nullable: true),
-                    Sexo = table.Column<string>(nullable: true),
-                    Edad = table.Column<int>(nullable: false),
-                    duenioId = table.Column<int>(nullable: true)
+                    Apellido = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Mascotas", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Mascotas_Usuarios_duenioId",
-                        column: x => x.duenioId,
-                        principalTable: "Usuarios",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                    table.PrimaryKey("PK_Usuarios", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -43,13 +35,36 @@ namespace MVCBasico.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Mascotas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(nullable: true),
+                    Especie = table.Column<int>(nullable: false),
+                    Sexo = table.Column<int>(nullable: false),
+                    Edad = table.Column<int>(nullable: false),
+                    duenioId = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mascotas", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Mascotas_Usuarios_duenioId",
+                        column: x => x.duenioId,
+                        principalTable: "Usuarios",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Consultas",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Motivo = table.Column<string>(nullable: true),
-                    Fecha = table.Column<string>(nullable: true),
+                    Fecha = table.Column<DateTime>(nullable: false),
                     VetAsignadoId = table.Column<int>(nullable: true),
                     UsuarioEnTurnoId = table.Column<int>(nullable: true)
                 },
@@ -96,6 +111,9 @@ namespace MVCBasico.Migrations
 
             migrationBuilder.DropTable(
                 name: "Veterinarios");
+
+            migrationBuilder.DropTable(
+                name: "Usuarios");
         }
     }
 }

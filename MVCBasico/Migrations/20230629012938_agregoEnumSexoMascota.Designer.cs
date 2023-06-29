@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVCBasico.Migrations
 {
     [DbContext(typeof(VetAppDatabaseContext))]
-    [Migration("20230620142536_CrearTablas")]
-    partial class CrearTablas
+    [Migration("20230629012938_agregoEnumSexoMascota")]
+    partial class agregoEnumSexoMascota
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,8 +28,8 @@ namespace MVCBasico.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Fecha")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Motivo")
                         .HasColumnType("nvarchar(max)");
@@ -59,14 +59,14 @@ namespace MVCBasico.Migrations
                     b.Property<int>("Edad")
                         .HasColumnType("int");
 
+                    b.Property<int>("Especie")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Raza")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sexo")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Sexo")
+                        .HasColumnType("int");
 
                     b.Property<int?>("duenioId")
                         .HasColumnType("int");

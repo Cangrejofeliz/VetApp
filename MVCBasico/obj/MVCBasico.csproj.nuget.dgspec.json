@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\ORT\\3er Cuatrimestre\\PNT\\VetApp\\MVCBasico\\MVCBasico\\MVCBasico.csproj": {}
+    "C:\\Users\\Usuario\\source\\repos\\VetApp\\MVCBasico\\MVCBasico.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\ORT\\3er Cuatrimestre\\PNT\\VetApp\\MVCBasico\\MVCBasico\\MVCBasico.csproj": {
+    "C:\\Users\\Usuario\\source\\repos\\VetApp\\MVCBasico\\MVCBasico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\ORT\\3er Cuatrimestre\\PNT\\VetApp\\MVCBasico\\MVCBasico\\MVCBasico.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\VetApp\\MVCBasico\\MVCBasico.csproj",
         "projectName": "MVCBasico",
-        "projectPath": "C:\\Users\\User\\Desktop\\ORT\\3er Cuatrimestre\\PNT\\VetApp\\MVCBasico\\MVCBasico\\MVCBasico.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\ORT\\3er Cuatrimestre\\PNT\\VetApp\\MVCBasico\\MVCBasico\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\source\\repos\\VetApp\\MVCBasico\\MVCBasico.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\source\\repos\\VetApp\\MVCBasico\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,10 +73,29 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -89,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.426\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

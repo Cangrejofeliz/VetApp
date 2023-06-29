@@ -13,7 +13,7 @@ namespace MVCBasico.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Motivo { get; set; }
-        public string Fecha { get; set; }
+        public DateTime Fecha { get; set; }
         public Veterinario VetAsignado { get; set; }
         public Usuario UsuarioEnTurno { get; set; }
     }

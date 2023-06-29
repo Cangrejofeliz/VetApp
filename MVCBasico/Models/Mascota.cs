@@ -13,8 +13,8 @@ namespace MVCBasico.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string Raza { get; set; }
-        public string Sexo { get; set; }
+        public TipoAnimal Especie { get; set; }
+        public SexoMascota Sexo { get; set; }
         public int Edad { get; set; }
         public Usuario duenio { get; set; }
     }

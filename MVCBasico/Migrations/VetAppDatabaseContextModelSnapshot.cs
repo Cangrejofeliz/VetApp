@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVCBasico.Migrations
 {
     [DbContext(typeof(VetAppDatabaseContext))]
-    partial class EscuelaDatabaseContextModelSnapshot : ModelSnapshot
+    partial class VetAppDatabaseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -26,8 +26,8 @@ namespace MVCBasico.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Fecha")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Motivo")
                         .HasColumnType("nvarchar(max)");
@@ -57,14 +57,14 @@ namespace MVCBasico.Migrations
                     b.Property<int>("Edad")
                         .HasColumnType("int");
 
+                    b.Property<int>("Especie")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Raza")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sexo")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Sexo")
+                        .HasColumnType("int");
 
                     b.Property<int?>("duenioId")
                         .HasColumnType("int");
